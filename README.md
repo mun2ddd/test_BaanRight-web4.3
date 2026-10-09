@@ -1,5 +1,5 @@
 Hi! While testing the extension I found a few cases where the
-extracted details were wrong. This PR fixes them and adds tests.
+extracted details were wrong. fixes and adds tests.
 
 ## Fixes
 - **Deposit**: "มัดจำ 1,000" was shown as "1 month(s) rent" and
@@ -14,7 +14,6 @@ extracted details were wrong. This PR fixes them and adds tests.
 - **Translation quota**: MyMemory returns HTTP 200 with a warning inside
   translatedText when the free quota runs out. That text was displayed
   and saved as the translation. It now shows an error instead.
-- **Clear button**: also hides the result and clears the saved draft.
 - Ctrl+Enter no longer starts a second run while one is in progress.
 
 ## Tests
@@ -24,4 +23,3 @@ Run with `node --test`.
 ## Notes
 - Unit-less deposit rule (<= 12 = months) is my assumption; happy to
   change it.
-- Not tested in a real browser beyond loading the extension.
